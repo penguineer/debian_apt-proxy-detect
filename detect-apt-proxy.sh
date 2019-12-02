@@ -6,6 +6,8 @@
 #
 # See https://wiki.debian.org/AptCacherNg#Clients for details on
 # return values
+#
+# SPDX-License-Identifier: MIT
 
 APT_PROXY_PORT=${APT_PROXY_PORT:-3142}
 HOST_IP=${HOST_IP:-"apt-proxy"}
