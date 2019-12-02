@@ -1,4 +1,4 @@
-# Detect an apt-cacher in a Debian environment
+# Detect an apt-proxy in a Debian environment
 
 ## Motivation
 
@@ -16,6 +16,7 @@ This is especially useful for mobile devices in changing environments.
 
 Install the scripts:
 ```
-sudo cp detect-apt-proxy.sh /usr/local/bin/
+sudo mkdir -p /usr/lib/apt-proxy-detect
+sudo cp apt-proxy-detect.sh /usr/lib/apt-proxy-detect
 sudo cp 01proxy /etc/apt/apt.conf.d/
 ```
