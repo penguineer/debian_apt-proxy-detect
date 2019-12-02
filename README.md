@@ -10,13 +10,14 @@ This is especially useful for mobile devices in changing environments.
 
 ## Setup
 
-* Copy the file `detect-apt-proxy.sh` to `/usr/local/bin` and  `01proxy` to `/etc/apt/conf.d`
+* Install using CMake (see below)
 
 ## Shell trail
 
-Install the scripts:
+Install the scripts using CMake from the source directory:
 ```
-sudo mkdir -p /usr/lib/apt-proxy-detect
-sudo cp apt-proxy-detect.sh /usr/lib/apt-proxy-detect
-sudo cp 01proxy /etc/apt/apt.conf.d/
+mkdir build
+cd build
+cmake ..
+sudo make install
 ```
