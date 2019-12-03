@@ -22,7 +22,8 @@ file(GLOB deps
     ${script_files}
 )
 
+include(GNUInstallDirs)
 
-install(FILES ${apt_files} DESTINATION ${CMAKE_INSTALL_PREFIX}/etc/apt/apt.conf.d)
-install(FILES ${share_files} DESTINATION ${CMAKE_INSTALL_PREFIX}/usr/share/${CMAKE_PROJECT_NAME})
-install(FILES ${script_files} DESTINATION ${CMAKE_INSTALL_PREFIX}/usr/lib/${CMAKE_PROJECT_NAME})
+install(FILES ${apt_files} DESTINATION ${CMAKE_INSTALL_FULL_SYSCONFDIR}/apt/apt.conf.d)
+install(FILES ${share_files} DESTINATION ${CMAKE_INSTALL_FULL_DOCDIR})
+install(FILES ${script_files} DESTINATION ${CMAKE_INSTALL_FULL_LIBEXECDIR}/${CMAKE_PROJECT_NAME})
