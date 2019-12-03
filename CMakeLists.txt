@@ -38,6 +38,11 @@ install(FILES ${apt_files} DESTINATION /etc/apt/apt.conf.d)
 install(FILES ${doc_files} DESTINATION ${CMAKE_INSTALL_PREFIX}/share/doc/${CMAKE_PROJECT_NAME})
 install(FILES ${script_files} DESTINATION ${CMAKE_INSTALL_PREFIX}/lib/${CMAKE_PROJECT_NAME})
 
+
+include(GetGitRevisionDescription)
+git_describe(VERSION --tags)
+
+
 add_custom_target(package
     DEPENDS ${deps}
 
@@ -45,5 +50,5 @@ add_custom_target(package
 
     COMMAND make install DESTDIR=${CMAKE_BINARY_DIR}/output
 
-    COMMAND tar cjvf ${CMAKE_PROJECT_NAME}.tar.bz2 -C ${CMAKE_BINARY_DIR}/output .
+    COMMAND tar cjvf ${CMAKE_PROJECT_NAME}-${VERSION}.tar.bz2 -C ${CMAKE_BINARY_DIR}/output .
 )
