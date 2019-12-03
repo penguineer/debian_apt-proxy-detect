@@ -6,6 +6,9 @@
 # Must be set before the project directive!
 set(CMAKE_INSTALL_PREFIX "/usr")
 
+set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules ${CMAKE_MODULE_PATH})
+
+
 project(apt-proxy-detect)
 
 cmake_minimum_required(VERSION 3.13)
