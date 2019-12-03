@@ -38,6 +38,8 @@ install(FILES ${script_files} DESTINATION ${CMAKE_INSTALL_PREFIX}/lib/${CMAKE_PR
 add_custom_target(package
     DEPENDS ${deps}
 
+    COMMAND rm -rf ${CMAKE_BINARY_DIR}/output
+
     COMMAND make install DESTDIR=${CMAKE_BINARY_DIR}/output
 
     COMMAND tar cjvf ${CMAKE_PROJECT_NAME}.tar.bz2 -C ${CMAKE_BINARY_DIR}/output .
