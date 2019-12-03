@@ -23,3 +23,11 @@ cd build
 cmake ..
 sudo make install
 ```
+
+Make a release:
+```
+mkdir build
+cd build
+cmake ..
+make package
+```
