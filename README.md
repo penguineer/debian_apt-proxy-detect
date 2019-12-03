@@ -1,5 +1,7 @@
 # Detect an apt-proxy in a Debian environment
 
+> Detect and use an apt cache if available.
+
 ## Motivation
 
 Apt caches help to speed up repeated or distributed installations. However, they become problematic when not available.
